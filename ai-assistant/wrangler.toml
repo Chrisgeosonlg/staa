@@ -1,0 +1,12 @@
+name = "staa-assistant"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+compatibility_flags = ["nodejs_compat"]
+
+[vars]
+# Websites allowed to call this worker (comma-separated, no trailing slashes).
+# Add http://127.0.0.1:5500 while testing with VS Code Live Server.
+ALLOWED_ORIGINS = "https://chrisgeosonlg.github.io,https://staa.co.tz,https://www.staa.co.tz"
+
+# The Anthropic API key is a secret, never stored here. Set it with:
+#   npx wrangler secret put ANTHROPIC_API_KEY

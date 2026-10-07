@@ -21,9 +21,12 @@ staa-website/
 ├── contact.html      Contact details, enquiry form, map (loads after cookie consent), FAQ
 ├── privacy.html      Privacy & cookie policy (Tanzania PDPA 2022)
 ├── 404.html          "Page not found" page (most hosts use it automatically)
+├── ai-assistant/     Optional: Cloudflare Worker that adds AI (Claude) answers. See its README
 └── assets/
     ├── css/style.css     All styling. Brand colours and fonts are at the top.
     ├── js/main.js        Menu, animations, health check, form, filters, cookie banner
+    ├── js/assistant.js   "Ask STAA" chat assistant (FAQ answers + WhatsApp handoff)
+    ├── data/faq.json     The assistant's questions and answers: edit this to change them
     └── img/
         ├── logo-light.png   Logo for dark backgrounds (header/footer)
         ├── logo-dark.png    Logo for light backgrounds
@@ -43,7 +46,7 @@ Each placeholder shows its file name and recommended size. To swap one:
 | Placeholder | Used on | Size |
 |---|---|---|
 | hero-consultation.svg | Home hero (now an illustration at `assets/img/hero-consultation.svg`; swap for a photo if you have one) | 1200×1400 |
-| about-office.svg | About | 900×1100 |
+| about-office.svg | About (done: now `assets/img/about-team.jpg`) | 900×1100 |
 | team-member.svg | About → team (×4) | 800×1000 |
 | service-*.svg (5 files) | Services, Insights | 800×600 |
 | contact-map.svg | Contact (swap for a Google Maps embed) | 1200×700 |
@@ -63,7 +66,7 @@ Search the project (Ctrl+Shift+F) for `[` and `REPLACE` to find every one.
 ## Editing common things
 
 - **Colours and fonts:** change the variables at the top of `assets/css/style.css` (`--forest-900`, `--lime-500`, and so on).
-- **Header and footer:** these are repeated on every page because it's a static site. If you change a menu link, phone number or address, change it in all seven HTML files. VS Code's search-and-replace across files (Ctrl+Shift+H) does this in one step.
+- **Header and footer:** these are repeated on every page because it's a static site. If you change a menu link, phone number or address, change it in all seven HTML files (and in `assets/data/faq.json` for the chat assistant). VS Code's search-and-replace across files (Ctrl+Shift+H) does this in one step.
 - **Tax health check questions:** these are in `assets/js/main.js`, section 5. Each question has the text, the service it recommends if answered "No", and that service's link.
 - **Phone, email and WhatsApp:** search for `717402578` and `info@staa.co.tz`.
 
@@ -103,3 +106,12 @@ The site currently has no analytics. If you add some, such as Google Analytics:
 1. Add a category to `CATEGORIES` in `main.js`, for example `{ key: 'analytics', name: 'Analytics', desc: '...' }`.
 2. Load the tracking code as `<script type="text/plain" data-consent="analytics" src="..."></script>`. It runs only after consent.
 3. List its cookies in the table in `privacy.html`, section 9.
+
+## Ask STAA chat assistant
+
+Every page has an **Ask STAA** button above the WhatsApp button. It answers common questions about STAA's services from `assets/data/faq.json`. When a question is out of scope, or needs a quote or advice on the visitor's own situation, it shows a **Continue on WhatsApp** button. That button opens WhatsApp chat with +255 717 402 578, with the visitor's question already typed in.
+
+- **Edit or add answers:** open `assets/data/faq.json`. Each entry has the question (`q`), the answer (`a`), and the `keywords` a visitor might use. You can also add an optional `link` to a page, and `"handoff": true` to also offer WhatsApp after the answer.
+- **Suggested questions:** the chips shown when the chat opens are the `suggestions` list at the top of the same file.
+- **Preview:** use Live Server. The assistant loads `faq.json` over http, so if you open the page by double-clicking it, every question goes to WhatsApp.
+- **AI answers (optional):** to have Claude answer in natural language from the same FAQ file, follow `ai-assistant/README.md`.

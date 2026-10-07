@@ -100,6 +100,8 @@
           <p>To deliver tax, accounting and advisory services we may collect identification details (such as TIN, NIDA or passport numbers), business registration documents, financial records, payroll and employee information, bank details and correspondence with authorities such as the Tanzania Revenue Authority (TRA). These details are covered by our engagement letter as well as this policy.</p>
           <h3>When you browse our website</h3>
           <p>Our website does not use analytics or advertising cookies. Like any website, our hosting provider automatically records technical data such as your IP address, browser type and the pages requested, for security and to keep the site running. If you choose to view our Google map, Google may collect data as described in <a href="#cookies">section 9</a>.</p>
+          <h3>When you use the STAA Assistant</h3>
+          <p>The chat assistant answers common questions from information on this website. Your conversation is kept in your browser only until you close the tab. <!-- REPLACE: if you switch on the AI version (see README), keep the next sentence; otherwise delete it. -->When AI answers are switched on, your questions are sent to our AI provider, Anthropic, to generate a reply, and are not used to train its models. Please don’t share personal or financial details in the chat. If you choose <em>Continue on WhatsApp</em>, your question is passed to WhatsApp so you can send it to us.</p>
 
           <h2 id="how-we-use">3. How we use your data</h2>
           <div class="table-wrap">
@@ -121,7 +123,7 @@
           <p>We share personal data only where needed:</p>
           <ul>
             <li><strong>Government authorities</strong> such as TRA, BRELA and regulators, when we act on your instructions or the law requires it.</li>
-            <li><strong>Service providers</strong> that support our work, such as email and hosting providers, accounting software and our website form service. They may use the data only on our instructions.</li>
+            <li><strong>Service providers</strong> that support our work, such as email and hosting providers, accounting software, our website form service and, if AI answers are switched on, the AI provider behind our chat assistant. They may use the data only on our instructions.</li>
             <li><strong>Professional advisers</strong> such as lawyers and auditors, who are bound by confidentiality.</li>
             <li><strong>Law enforcement or courts</strong>, where we are legally required to disclose information.</li>
           </ul>
@@ -159,6 +161,7 @@
               <thead><tr><th scope="col">Name</th><th scope="col">Provider</th><th scope="col">Purpose</th><th scope="col">Type</th><th scope="col">Duration</th></tr></thead>
               <tbody>
                 <tr><td><code>staa-consent</code></td><td>STAA</td><td>Remembers your cookie choices so we don’t ask on every page. It is stored in your browser and never sent to us.</td><td>Strictly necessary</td><td>12 months</td></tr>
+                <tr><td><code>staa-assistant</code></td><td>STAA</td><td>Keeps your chat with the STAA Assistant while you move between pages. Stored in your browser only.</td><td>Strictly necessary</td><td>Until you close the tab</td></tr>
                 <tr><td>Google Maps cookies (e.g. <code>NID</code>)</td><td>Google</td><td>Shows our location on the contact page. Google may use these cookies to remember preferences and measure usage.</td><td>Third-party content, optional</td><td>Up to 6 months</td></tr>
               </tbody>
             </table>
@@ -232,5 +235,6 @@
   </a>
 
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/assistant.js"></script>
 </body>
 </html>

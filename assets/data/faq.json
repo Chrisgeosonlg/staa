@@ -1,0 +1,499 @@
+{
+  "_readme": "Knowledge base for the STAA Assistant (assets/js/assistant.js) and the optional AI worker (ai-assistant/). Each FAQ needs: id, q (the question as a visitor would ask it), keywords (words or short phrases that point to it, lowercase), a (the answer). Optional: link {href, label}, handoff (true = also offer WhatsApp). Only include facts you are happy for the assistant to repeat.",
+  "whatsapp": "255717402578",
+  "suggestions": [
+    "What services do you offer?",
+    "Can you represent us before TRA?",
+    "Do you prepare IFRS statements?",
+    "Where is your office?",
+    "How much do your services cost?"
+  ],
+  "faqs": [
+    {
+      "id": "services",
+      "q": "What services do you offer?",
+      "keywords": [
+        "services",
+        "service",
+        "offer",
+        "tax",
+        "taxes",
+        "what do you do",
+        "help with",
+        "practice areas",
+        "huduma"
+      ],
+      "a": "STAA has five practice areas: (1) tax advisory and compliance, (2) accounting and financial management, (3) business advisory, (4) audit support and risk advisory, and (5) East Africa market support. Ask me about any of them, or see the full list on our services page.",
+      "link": {
+        "href": "services.html",
+        "label": "View all services"
+      }
+    },
+    {
+      "id": "tra",
+      "q": "Can STAA represent us before the Tanzania Revenue Authority?",
+      "keywords": [
+        "tra",
+        "revenue authority",
+        "represent",
+        "representation",
+        "tax audit",
+        "tax dispute",
+        "objection",
+        "assessment",
+        "tax investigation"
+      ],
+      "a": "Yes. We provide tax audit support and representation before the Tanzania Revenue Authority (TRA), alongside preparing and filing corporate, individual, VAT and PAYE returns.",
+      "link": {
+        "href": "services.html#tax",
+        "label": "Tax advisory services"
+      }
+    },
+    {
+      "id": "returns",
+      "q": "Can you prepare and file our tax returns?",
+      "keywords": [
+        "vat",
+        "paye",
+        "tax return",
+        "returns",
+        "file",
+        "filing",
+        "corporate tax",
+        "income tax",
+        "individual tax",
+        "compliance",
+        "deadline",
+        "kodi"
+      ],
+      "a": "Yes. We prepare and file corporate, individual, VAT and PAYE returns, and run compliance reviews so you meet every TRA deadline.",
+      "link": {
+        "href": "contact.html?service=tax",
+        "label": "Enquire about tax services"
+      }
+    },
+    {
+      "id": "planning",
+      "q": "Do you help with tax planning?",
+      "keywords": [
+        "tax planning",
+        "planning",
+        "strategy",
+        "reduce tax",
+        "save tax",
+        "tax efficient",
+        "cross border tax"
+      ],
+      "a": "Yes. We provide tax planning and strategy aligned with Tanzanian and East African tax laws, including advice on cross-border taxation within East African markets. For advice on your specific situation, an advisor will need to review your details.",
+      "link": {
+        "href": "services.html#tax",
+        "label": "Tax advisory services"
+      },
+      "handoff": true
+    },
+    {
+      "id": "tax-specifics",
+      "q": "What is the tax rate, penalty or rule for my situation?",
+      "keywords": [
+        "rate",
+        "rates",
+        "vat rate",
+        "tax rate",
+        "percentage",
+        "penalty",
+        "penalties",
+        "interest",
+        "fine",
+        "withholding",
+        "exemption",
+        "exempt",
+        "calculate",
+        "calculation",
+        "how much tax",
+        "tax law",
+        "finance act",
+        "threshold",
+        "late",
+        "late filing",
+        "late payment"
+      ],
+      "a": "Tax rates, thresholds and penalties change with each Finance Act and depend on your circumstances, so I don’t quote figures here. An STAA advisor can confirm what applies to you.",
+      "link": {
+        "href": "services.html#tax",
+        "label": "Tax advisory services"
+      },
+      "handoff": true
+    },
+    {
+      "id": "health-check",
+      "q": "What is the tax health check?",
+      "keywords": [
+        "health check",
+        "tax health",
+        "check my compliance",
+        "review",
+        "quiz",
+        "assessment tool"
+      ],
+      "a": "The tax health check is a free, 1-minute quiz on our home page. Five yes-or-no questions show where your business may have compliance gaps, and it suggests which STAA service can help.",
+      "link": {
+        "href": "index.html#health-check-section",
+        "label": "Take the health check"
+      }
+    },
+    {
+      "id": "accounting",
+      "q": "Do you offer bookkeeping and accounting?",
+      "keywords": [
+        "accounting",
+        "accountant",
+        "bookkeeping",
+        "books",
+        "records",
+        "accounts",
+        "hesabu",
+        "financial records"
+      ],
+      "a": "Yes. Our accounting and financial management service covers bookkeeping and record management, IFRS financial statements, payroll and statutory compliance, financial reporting and performance analysis, and budgeting and cash-flow management.",
+      "link": {
+        "href": "services.html#accounting",
+        "label": "Accounting services"
+      }
+    },
+    {
+      "id": "ifrs",
+      "q": "Can you prepare IFRS financial statements?",
+      "keywords": [
+        "ifrs",
+        "financial statements",
+        "statements",
+        "annual accounts",
+        "lenders",
+        "donors",
+        "investors",
+        "reporting standards"
+      ],
+      "a": "Yes. We prepare financial statements in line with IFRS standards, ready to share with lenders, donors and investors. We also support the bookkeeping, payroll, reporting and budgeting behind them.",
+      "link": {
+        "href": "services.html#accounting",
+        "label": "Accounting services"
+      }
+    },
+    {
+      "id": "payroll",
+      "q": "Do you manage payroll?",
+      "keywords": [
+        "payroll",
+        "salaries",
+        "salary",
+        "employees",
+        "staff pay",
+        "nssf",
+        "sdl",
+        "wcf",
+        "statutory"
+      ],
+      "a": "Yes. We handle payroll management and statutory compliance as part of our accounting and financial management service.",
+      "link": {
+        "href": "services.html#accounting",
+        "label": "Accounting services"
+      }
+    },
+    {
+      "id": "budgeting",
+      "q": "Can you help with budgeting and cash flow?",
+      "keywords": [
+        "budget",
+        "budgeting",
+        "cash flow",
+        "cashflow",
+        "forecast",
+        "performance analysis",
+        "management accounts"
+      ],
+      "a": "Yes. We help with budgeting and cash-flow management, and with financial reporting and performance analysis so you can see how the business is really doing.",
+      "link": {
+        "href": "services.html#accounting",
+        "label": "Accounting services"
+      }
+    },
+    {
+      "id": "registration",
+      "q": "Can you help me register or structure a business?",
+      "keywords": [
+        "register",
+        "registration",
+        "brela",
+        "incorporate",
+        "incorporation",
+        "company registration",
+        "structure",
+        "structuring",
+        "start a business",
+        "set up",
+        "kusajili"
+      ],
+      "a": "Yes. We help with business registration and structuring in Tanzania and across East Africa, and we support startups and SMEs as they scale.",
+      "link": {
+        "href": "services.html#advisory",
+        "label": "Business advisory services"
+      }
+    },
+    {
+      "id": "planning-finance",
+      "q": "Do you prepare business plans or feasibility studies?",
+      "keywords": [
+        "business plan",
+        "feasibility",
+        "feasibility study",
+        "financial model",
+        "financial modelling",
+        "modeling",
+        "investment",
+        "investor",
+        "valuation",
+        "funding",
+        "loan application"
+      ],
+      "a": "Yes. Our business advisory team prepares feasibility studies and business plans, builds financial models, and gives investment advice.",
+      "link": {
+        "href": "services.html#advisory",
+        "label": "Business advisory services"
+      }
+    },
+    {
+      "id": "governance",
+      "q": "Do you help with corporate governance and internal controls?",
+      "keywords": [
+        "governance",
+        "internal control",
+        "internal controls",
+        "controls",
+        "board",
+        "policies",
+        "procedures"
+      ],
+      "a": "Yes. We design corporate governance and internal control systems, and our risk advisory team reviews existing controls for weak points.",
+      "link": {
+        "href": "services.html#audit",
+        "label": "Audit & risk services"
+      }
+    },
+    {
+      "id": "audit",
+      "q": "Do you offer audit support and risk advisory?",
+      "keywords": [
+        "audit",
+        "auditor",
+        "internal audit",
+        "risk",
+        "risk assessment",
+        "compliance audit",
+        "operational review",
+        "fraud",
+        "fraud prevention"
+      ],
+      "a": "Yes. We provide internal audit support, risk assessment and management frameworks, compliance audits and operational reviews, and advice on fraud prevention and financial controls.",
+      "link": {
+        "href": "services.html#audit",
+        "label": "Audit & risk services"
+      }
+    },
+    {
+      "id": "eac",
+      "q": "Do you work with businesses outside Tanzania?",
+      "keywords": [
+        "east africa",
+        "eac",
+        "kenya",
+        "uganda",
+        "rwanda",
+        "burundi",
+        "south sudan",
+        "drc",
+        "congo",
+        "cross border",
+        "regional",
+        "expand",
+        "expansion",
+        "outside tanzania",
+        "foreign",
+        "international"
+      ],
+      "a": "Yes. We advise on doing business within the East African Community (EAC), including cross-border business setup, tax considerations, regulatory compliance across regional jurisdictions, and trade and investment advice.",
+      "link": {
+        "href": "services.html#eac",
+        "label": "East Africa market support"
+      }
+    },
+    {
+      "id": "clients",
+      "q": "Who do you work with? Do you only work with large companies?",
+      "keywords": [
+        "who do you",
+        "clients",
+        "small business",
+        "sme",
+        "smes",
+        "startup",
+        "startups",
+        "entrepreneur",
+        "large companies",
+        "corporate",
+        "corporates",
+        "individual",
+        "individuals",
+        "government",
+        "public sector",
+        "small company"
+      ],
+      "a": "We work with clients of every size: SMEs, startups and entrepreneurs, corporates, NGOs and development partners, government and public-sector entities, and individual professionals.",
+      "link": {
+        "href": "about.html",
+        "label": "About STAA"
+      }
+    },
+    {
+      "id": "ngo",
+      "q": "Do you work with NGOs and donor-funded projects?",
+      "keywords": [
+        "ngo",
+        "ngos",
+        "non profit",
+        "nonprofit",
+        "charity",
+        "donor",
+        "donors",
+        "development partner",
+        "grant",
+        "grants",
+        "project"
+      ],
+      "a": "Yes. NGOs and development partners are among our core clients. We prepare IFRS financial statements and reports that meet donor expectations, and support internal controls and audit readiness.",
+      "link": {
+        "href": "services.html#accounting",
+        "label": "Accounting services"
+      }
+    },
+    {
+      "id": "confidential",
+      "q": "Will our financial information be kept confidential?",
+      "keywords": [
+        "confidential",
+        "confidentiality",
+        "privacy",
+        "private",
+        "secure",
+        "security",
+        "data",
+        "trust",
+        "siri"
+      ],
+      "a": "Yes. Client confidentiality is one of the four principles behind every STAA engagement, together with accuracy, timely delivery and tailored solutions. Our privacy policy explains how we handle personal data.",
+      "link": {
+        "href": "privacy.html",
+        "label": "Privacy policy"
+      }
+    },
+    {
+      "id": "about",
+      "q": "Who is STAA?",
+      "keywords": [
+        "who are you",
+        "about",
+        "staa",
+        "smile tax",
+        "company",
+        "firm",
+        "background",
+        "vision",
+        "mission"
+      ],
+      "a": "Smile Tax & Accounting Advisory (STAA) is a professional financial services firm based in Dar es Salaam. We provide tax, accounting and business advisory services to organisations and individuals across Tanzania and East Africa, helping them achieve compliance, clarity and sustainable growth.",
+      "link": {
+        "href": "about.html",
+        "label": "About STAA"
+      }
+    },
+    {
+      "id": "location",
+      "q": "Where is your office?",
+      "keywords": [
+        "where",
+        "location",
+        "located",
+        "address",
+        "office",
+        "goba",
+        "directions",
+        "map",
+        "visit",
+        "find you",
+        "po box",
+        "mahali",
+        "ofisi"
+      ],
+      "a": "We're at Goba Centre, Dar es Salaam. Our postal address is P.O. Box 66678, Dar es Salaam. You'll find a map on our contact page.",
+      "link": {
+        "href": "contact.html",
+        "label": "Contact & map"
+      }
+    },
+    {
+      "id": "contact",
+      "q": "How can I contact STAA or book a consultation?",
+      "keywords": [
+        "contact",
+        "phone",
+        "call",
+        "email",
+        "reach",
+        "book",
+        "booking",
+        "consultation",
+        "appointment",
+        "meeting",
+        "talk to",
+        "speak to",
+        "advisor",
+        "human",
+        "person",
+        "whatsapp",
+        "number",
+        "simu"
+      ],
+      "a": "Call or WhatsApp us on +255 717 402 578, email info@staa.co.tz, or send an enquiry through our contact page. An advisor will get back to you.",
+      "link": {
+        "href": "contact.html",
+        "label": "Book a consultation"
+      },
+      "handoff": true
+    },
+    {
+      "id": "pricing",
+      "q": "How much do your services cost?",
+      "keywords": [
+        "price",
+        "prices",
+        "pricing",
+        "cost",
+        "costs",
+        "fee",
+        "fees",
+        "charge",
+        "charges",
+        "how much",
+        "quote",
+        "quotation",
+        "affordable",
+        "bei",
+        "gharama",
+        "your rates",
+        "your fees",
+        "your charges"
+      ],
+      "a": "Our fees depend on the scope and complexity of the work, so we quote each engagement individually. Tell an advisor what you need and they'll give you a clear quote.",
+      "handoff": true
+    }
+  ]
+}
