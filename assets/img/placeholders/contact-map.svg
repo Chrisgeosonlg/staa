@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+<defs><pattern id="p" width="48" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="48" height="48" fill="#1B3227"/><rect width="2" height="48" fill="#22402F"/></pattern></defs>
+<rect width="1200" height="700" fill="url(#p)"/>
+<g transform="translate(600.0,320.0)" fill="none" stroke="#98D320" stroke-width="5" stroke-linecap="square"><path d="M-26 26L26 -26M-8 -26H26V8"/></g>
+<text x="600.0" y="400.0" fill="#FFFFFF" font-family="Montserrat,Arial,sans-serif" font-size="30" font-weight="700" text-anchor="middle">Map — Goba Centre, Dar es Salaam</text>
+<text x="600.0" y="448.0" fill="#98D320" font-family="Montserrat,Arial,sans-serif" font-size="20" text-anchor="middle">Replace: assets/img/placeholders/contact-map.svg  ·  1200×700</text>
+</svg>

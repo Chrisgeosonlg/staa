@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1100" viewBox="0 0 900 1100">
+<defs><pattern id="p" width="48" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="48" height="48" fill="#1B3227"/><rect width="2" height="48" fill="#22402F"/></pattern></defs>
+<rect width="900" height="1100" fill="url(#p)"/>
+<g transform="translate(450.0,520.0)" fill="none" stroke="#98D320" stroke-width="5" stroke-linecap="square"><path d="M-26 26L26 -26M-8 -26H26V8"/></g>
+<text x="450.0" y="600.0" fill="#FFFFFF" font-family="Montserrat,Arial,sans-serif" font-size="22" font-weight="700" text-anchor="middle">Office — Goba Centre, Dar es Salaam</text>
+<text x="450.0" y="635.2" fill="#98D320" font-family="Montserrat,Arial,sans-serif" font-size="15" text-anchor="middle">Replace: assets/img/placeholders/about-office.svg  ·  900×1100</text>
+</svg>

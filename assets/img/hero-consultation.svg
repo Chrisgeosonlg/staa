@@ -1,0 +1,128 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1400" viewBox="0 0 1200 1400">
+  <title>An STAA advisor meeting a client</title>
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1F3A2D"/>
+      <stop offset="1" stop-color="#15271E"/>
+    </linearGradient>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2E4A3B"/>
+      <stop offset="1" stop-color="#3D5E49"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#132219"/>
+      <stop offset="1" stop-color="#0E1A13"/>
+    </linearGradient>
+    <clipPath id="win"><rect x="110" y="170" width="980" height="560"/></clipPath>
+  </defs>
+
+  <!-- Wall -->
+  <rect width="1200" height="1400" fill="url(#wall)"/>
+  <g transform="translate(-72 60) scale(1.12)">
+
+  <!-- Window with Dar es Salaam skyline -->
+  <rect x="96" y="156" width="1008" height="588" fill="#0F1D16"/>
+  <g clip-path="url(#win)">
+    <rect x="110" y="170" width="980" height="560" fill="url(#sky)"/>
+    <circle cx="300" cy="560" r="130" fill="#98D320" opacity=".14"/>
+    <circle cx="300" cy="560" r="70" fill="#98D320" opacity=".18"/>
+    <g fill="#24402F">
+      <rect x="110" y="560" width="90" height="170"/>
+      <rect x="210" y="500" width="70" height="230"/>
+      <rect x="290" y="590" width="110" height="140"/>
+      <rect x="410" y="430" width="80" height="300"/>
+      <rect x="500" y="520" width="120" height="210"/>
+      <rect x="630" y="380" width="90" height="350"/>
+      <rect x="730" y="480" width="70" height="250"/>
+      <rect x="810" y="550" width="130" height="180"/>
+      <rect x="950" y="460" width="80" height="270"/>
+      <rect x="1040" y="580" width="60" height="150"/>
+    </g>
+    <g fill="#98D320" opacity=".35">
+      <rect x="425" y="455" width="12" height="18"/><rect x="455" y="455" width="12" height="18"/>
+      <rect x="425" y="495" width="12" height="18"/><rect x="455" y="535" width="12" height="18"/>
+      <rect x="645" y="405" width="12" height="18"/><rect x="675" y="445" width="12" height="18"/>
+      <rect x="645" y="485" width="12" height="18"/><rect x="965" y="485" width="12" height="18"/>
+      <rect x="995" y="525" width="12" height="18"/><rect x="225" y="525" width="12" height="18"/>
+    </g>
+    <!-- Growth line across the glass -->
+    <path d="M150 650 L330 560 L470 600 L690 410 L880 450 L1050 270" fill="none" stroke="#98D320" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+    <path d="M1000 262 L1056 264 L1046 318" fill="none" stroke="#98D320" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity=".55"/>
+  </g>
+  <rect x="596" y="170" width="8" height="560" fill="#0F1D16"/>
+  <rect x="110" y="446" width="980" height="8" fill="#0F1D16"/>
+  <rect x="80" y="744" width="1040" height="16" fill="#0F1D16"/>
+
+  <!-- Floor -->
+  <rect x="-100" y="1000" width="1400" height="400" fill="url(#floor)"/>
+
+  <!-- Plant -->
+  <g>
+    <path d="M1060 1000 L1050 880 L1130 880 L1120 1000 Z" fill="#2E4A3B"/>
+    <path d="M1090 880 C1040 820 1030 760 1050 700 C1080 760 1095 820 1090 880 Z" fill="#3F6B0C"/>
+    <path d="M1092 880 C1120 810 1150 770 1180 750 C1170 810 1140 860 1092 880 Z" fill="#5E8F1A"/>
+    <path d="M1088 880 C1060 840 1010 820 980 820 C1010 860 1050 880 1088 880 Z" fill="#4C7A14"/>
+  </g>
+
+  <!-- Chairs -->
+  <rect x="190" y="640" width="290" height="300" rx="36" fill="#0F1D16"/>
+  <rect x="720" y="650" width="290" height="290" rx="36" fill="#0F1D16"/>
+
+  <!-- Advisor (left) -->
+  <g>
+    <path d="M215 940 C215 740 245 672 335 666 C425 672 455 740 455 940 Z" fill="#98D320"/>
+    <path d="M300 670 L335 770 L370 670 Z" fill="#F4F7EF"/>
+    <path d="M296 672 L335 790 L312 700 Z M374 672 L335 790 L358 700 Z" fill="#7FB419"/>
+    <rect x="312" y="612" width="46" height="62" rx="16" fill="#6B3F25"/>
+    <circle cx="335" cy="568" r="64" fill="#6B3F25"/>
+    <path d="M271 566 C268 520 300 498 338 498 C378 498 400 522 400 548 C380 532 352 530 330 538 C305 546 286 556 271 566 Z" fill="#1A1410"/>
+    <ellipse cx="277" cy="578" rx="10" ry="16" fill="#5C3620"/>
+    <!-- Arm to laptop -->
+    <path d="M425 712 C470 760 505 830 560 880" fill="none" stroke="#7FB419" stroke-width="58" stroke-linecap="round"/>
+    <circle cx="582" cy="888" r="22" fill="#6B3F25"/>
+  </g>
+
+  <!-- Client (right) -->
+  <g>
+    <path d="M745 940 C745 750 775 684 865 678 C955 684 985 750 985 940 Z" fill="#F4F7EF"/>
+    <path d="M830 682 C845 720 885 720 900 682" fill="none" stroke="#C9D6CE" stroke-width="8" stroke-linecap="round"/>
+    <rect x="842" y="624" width="46" height="62" rx="16" fill="#8A5636"/>
+    <circle cx="865" cy="580" r="62" fill="#8A5636"/>
+    <circle cx="898" cy="502" r="36" fill="#1A1410"/>
+    <path d="M803 590 C796 530 826 510 866 510 C908 510 930 536 928 572 C908 552 878 546 852 552 C830 558 815 570 803 590 Z" fill="#1A1410"/>
+    <ellipse cx="925" cy="590" rx="10" ry="16" fill="#6E4229"/>
+    <circle cx="926" cy="612" r="6" fill="#98D320"/>
+    <!-- Arm to documents -->
+    <path d="M772 724 C740 780 720 840 700 884" fill="none" stroke="#DCE5D3" stroke-width="56" stroke-linecap="round"/>
+    <circle cx="694" cy="896" r="21" fill="#8A5636"/>
+  </g>
+
+  <!-- Table -->
+  <path d="M40 960 L1160 960 L1100 870 L100 870 Z" fill="#E6EDDD"/>
+  <rect x="40" y="960" width="1120" height="30" fill="#B9C7AE"/>
+  <rect x="120" y="990" width="40" height="410" fill="#0B1610"/>
+  <rect x="1040" y="990" width="40" height="410" fill="#0B1610"/>
+  <rect x="160" y="990" width="880" height="60" fill="#132219"/>
+
+  <!-- Laptop (seen from the side, facing the advisor) -->
+  <path d="M470 900 L660 900 L650 914 L480 914 Z" fill="#55665B"/>
+  <path d="M500 900 L540 740 L556 744 L520 900 Z" fill="#2E4A3B"/>
+
+  <!-- Documents with a chart -->
+  <path d="M650 918 L860 918 L842 878 L668 878 Z" fill="#FFFFFF"/>
+  <path d="M700 930 L900 930 L884 896 L716 896 Z" fill="#F4F7EF"/>
+  <g fill="#98D320">
+    <rect x="740" y="912" width="14" height="12"/>
+    <rect x="762" y="906" width="14" height="18"/>
+    <rect x="784" y="900" width="14" height="24"/>
+  </g>
+  <rect x="812" y="906" width="56" height="5" fill="#C9D6CE"/>
+  <rect x="812" y="916" width="40" height="5" fill="#C9D6CE"/>
+
+  <!-- Mugs -->
+  <path d="M960 870 L1004 870 L998 930 L966 930 Z" fill="#98D320"/>
+  <path d="M1002 884 C1024 884 1024 914 1000 914" fill="none" stroke="#98D320" stroke-width="7"/>
+  <path d="M250 872 L294 872 L288 932 L256 932 Z" fill="#F4F7EF"/>
+  <path d="M252 886 C230 886 230 916 254 916" fill="none" stroke="#F4F7EF" stroke-width="7"/>
+  </g>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000">
+<defs><pattern id="p" width="48" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="48" height="48" fill="#1B3227"/><rect width="2" height="48" fill="#22402F"/></pattern></defs>
+<rect width="800" height="1000" fill="url(#p)"/>
+<circle cx="400" cy="400" r="110" fill="none" stroke="#98D320" stroke-width="6"/>
+<path d="M200 760c0-120 90-200 200-200s200 80 200 200" fill="none" stroke="#98D320" stroke-width="6"/>
+<text x="400" y="860" fill="#FFFFFF" font-family="Montserrat,Arial,sans-serif" font-size="32" font-weight="700" text-anchor="middle">Team member portrait</text>
+<text x="400" y="910" fill="#98D320" font-family="Montserrat,Arial,sans-serif" font-size="22" text-anchor="middle">Replace: team-member.svg · 800×1000</text>
+</svg>

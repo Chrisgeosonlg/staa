@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+<defs><pattern id="p" width="48" height="48" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="48" height="48" fill="#1B3227"/><rect width="2" height="48" fill="#22402F"/></pattern></defs>
+<rect width="800" height="600" fill="url(#p)"/>
+<g transform="translate(400.0,270.0)" fill="none" stroke="#98D320" stroke-width="5" stroke-linecap="square"><path d="M-26 26L26 -26M-8 -26H26V8"/></g>
+<text x="400.0" y="350.0" fill="#FFFFFF" font-family="Montserrat,Arial,sans-serif" font-size="20" font-weight="700" text-anchor="middle">Tax advisory &amp; compliance</text>
+<text x="400.0" y="382.0" fill="#98D320" font-family="Montserrat,Arial,sans-serif" font-size="14" text-anchor="middle">Replace: assets/img/placeholders/service-tax.svg  ·  800×600</text>
+</svg>
