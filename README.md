@@ -42,7 +42,7 @@ Each placeholder shows its file name and recommended size. To swap one:
 
 | Placeholder | Used on | Size |
 |---|---|---|
-| hero-consultation.svg | Home hero (now an illustration at `assets/img/hero-consultation.svg`; swap for a photo if you have one) | 1200×1400 |
+| hero-consultation.svg | Home hero (done: now `assets/img/hero.jpg`) | 1200×1400 |
 | about-office.svg | About | 900×1100 |
 | team-member.svg | About → team (×4) | 800×1000 |
 | service-*.svg (5 files) | Services, Insights | 800×600 |
