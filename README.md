@@ -47,7 +47,7 @@ Each placeholder shows its file name and recommended size. To swap one:
 |---|---|---|
 | hero-consultation.svg | Home hero (now an illustration at `assets/img/hero-consultation.svg`; swap for a photo if you have one) | 1200×1400 |
 | about-office.svg | About (done: now `assets/img/about-team.jpg`) | 900×1100 |
-| team-member.svg | About → team (×4) | 800×1000 |
+| team-member.svg | Unused (directors' photos added) | 800×1000 |
 | service-*.svg (5 files) | Services, Insights | 800×600 |
 | contact-map.svg | Contact (swap for a Google Maps embed) | 1200×700 |
 | og-share.svg | Social sharing preview (`og:image` in each `<head>`) | 1200×630 |

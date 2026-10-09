@@ -16,8 +16,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script>(function(h){var v;try{v=localStorage.getItem('staa-visited')}catch(e){}h.className+=v?' pl-on pl-slow pl-hold':' pl-on pl-first pl-hold'})(document.documentElement)</script>
 </head>
 <body>
+  <!-- Preloader: first visit or slow page only (see main.js) -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader-inner">
+      <div class="preloader-mark"><img src="assets/img/mark.png" alt="" width="68" height="68"><img src="assets/img/mark.png" alt="" width="68" height="68"></div>
+      <div class="preloader-line"><span></span></div>
+      <p class="preloader-word">Smile Tax &amp; Accounting Advisory</p>
+    </div>
+  </div>
+
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- ===== HEADER (same on every page) ===== -->
@@ -127,32 +137,25 @@
     <!-- ===== TEAM (placeholders) ===== -->
     <section class="section">
       <div class="container">
+        <div class="split team-split">
         <div class="section-head">
           <span class="eyebrow">Our people</span>
           <h2>The advisors behind STAA.</h2>
+          <!-- REPLACE with a short line about the directors -->
+          <p class="lead">STAA is led by its two directors, who work directly with every client — from first conversation to final filing.</p>
         </div>
-        <!-- REPLACE each [Name], [Role] and photo. Copy a .team-card block to add more people. -->
-        <div class="grid grid-4">
+        <div class="grid grid-2 team-grid">
           <article class="team-card reveal">
-            <div class="media"><img src="assets/img/placeholders/team-member.svg" alt="[Name], [Role]" width="800" height="1000"></div>
-            <h3>[Name]</h3>
-            <p>[Role, e.g. Managing Partner]</p>
+            <div class="media"><img src="assets/img/lilian-rwechungura.jpg" alt="Lilian Ferdinand Rwechungura, Director" width="766" height="1024" loading="lazy"></div>
+            <h3>Lilian Ferdinand Rwechungura</h3>
+            <p>Director</p>
           </article>
           <article class="team-card reveal" data-delay="1">
-            <div class="media"><img src="assets/img/placeholders/team-member.svg" alt="[Name], [Role]" width="800" height="1000"></div>
-            <h3>[Name]</h3>
-            <p>[Role, e.g. Head of Tax]</p>
+            <div class="media"><img src="assets/img/prisca-ndali.jpg" alt="Prisca Eliasi Ndali, Director" width="766" height="1024" loading="lazy"></div>
+            <h3>Prisca Eliasi Ndali</h3>
+            <p>Director</p>
           </article>
-          <article class="team-card reveal" data-delay="2">
-            <div class="media"><img src="assets/img/placeholders/team-member.svg" alt="[Name], [Role]" width="800" height="1000"></div>
-            <h3>[Name]</h3>
-            <p>[Role, e.g. Senior Accountant]</p>
-          </article>
-          <article class="team-card reveal" data-delay="3">
-            <div class="media"><img src="assets/img/placeholders/team-member.svg" alt="[Name], [Role]" width="800" height="1000"></div>
-            <h3>[Name]</h3>
-            <p>[Role, e.g. Business Advisor]</p>
-          </article>
+        </div>
         </div>
       </div>
     </section>

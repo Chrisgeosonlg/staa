@@ -10,6 +10,31 @@
   'use strict';
   document.documentElement.classList.remove('no-js');
 
+  /* ---------- 0. Preloader (first visit, or a slow page) ---------- */
+  var root = document.documentElement;
+  if (root.classList.contains('pl-on')) {
+    var firstVisit = root.classList.contains('pl-first');
+    var finished = false;
+    var clearLoader = function () { root.classList.remove('pl-on', 'pl-first', 'pl-slow', 'pl-hold', 'pl-leave'); };
+    var finishLoader = function () {
+      if (finished) return;
+      finished = true;
+      try { localStorage.setItem('staa-visited', '1'); } catch (e) {}
+      var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var minShow = firstVisit ? (still ? 600 : 1700) : 0; // let the mark finish filling on a first visit
+      setTimeout(function () {
+        // A slow-page loader only appears after 0.6s; if we're done before then, skip it entirely
+        if (!firstVisit && performance.now() < 650) { clearLoader(); return; }
+        root.classList.add('pl-leave');
+        root.classList.remove('pl-hold');
+        setTimeout(clearLoader, still ? 0 : 950);
+      }, Math.max(0, minShow - performance.now()));
+    };
+    if (document.readyState === 'complete') finishLoader();
+    else window.addEventListener('load', finishLoader);
+    setTimeout(finishLoader, 8000); // never keep anyone waiting on a stuck asset
+  }
+
   /* ---------- 1. Mobile navigation ---------- */
   var toggle = document.querySelector('.nav-toggle');
   var menu = document.getElementById('nav-menu');

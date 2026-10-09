@@ -237,8 +237,13 @@ ul { margin: 0; padding: 0; list-style: none; }
 .service-block header { display: flex; align-items: center; gap: 16px; }
 
 /* Team */
+.team-split { grid-template-columns: .9fr 1.1fr; align-items: end; }
+.team-split .section-head { margin-bottom: 0; }
+.team-grid { gap: 24px; }
+.team-grid .team-card:nth-child(2) { margin-top: 56px; }
 .team-card { display: flex; flex-direction: column; gap: 14px; }
 .team-card .media { aspect-ratio: 4 / 5; }
+.team-card .media img { object-position: center top; }
 .team-card h3 { font-size: 1.1rem; }
 .team-card p { color: var(--muted); font-size: .9rem; }
 
@@ -406,6 +411,41 @@ ul { margin: 0; padding: 0; list-style: none; }
 .wa-float:hover { transform: translateY(-3px); color: var(--forest-900); }
 .wa-float svg { width: 28px; height: 28px; }
 
+/* PRELOADER — shown on a first visit, or when a page is slow to load.
+   The inline script in each page's <head> adds pl-on + pl-first / pl-slow; main.js removes them. */
+.preloader { display: none; }
+.pl-on .preloader { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; background: var(--forest-900); transition: transform .9s cubic-bezier(.76, 0, .24, 1), border-radius .9s cubic-bezier(.76, 0, .24, 1); animation: pl-failsafe 0s 12s forwards; }
+.pl-slow .preloader { opacity: 0; visibility: hidden; animation: pl-show .35s .6s forwards, pl-failsafe 0s 12s forwards; }
+.preloader-inner { display: flex; flex-direction: column; align-items: center; gap: 26px; transition: opacity .3s, transform .5s var(--ease); }
+.preloader-mark { position: relative; width: 68px; height: 68px; }
+.preloader-mark img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.preloader-mark img:first-child { opacity: .12; }
+.preloader-mark img:last-child { clip-path: inset(100% 0 0 0); animation: pl-fill 1.3s var(--ease) .15s forwards; }
+.pl-slow .preloader-mark img:last-child { animation: pl-fill-loop 1.8s var(--ease) infinite; }
+.preloader-line { width: 120px; height: 2px; background: var(--forest-700); overflow: hidden; }
+.preloader-line span { display: block; height: 100%; background: var(--lime-500); transform: scaleX(0); transform-origin: left; animation: pl-line 1.4s var(--ease) .15s forwards; }
+.pl-slow .preloader-line span { animation: pl-line-loop 1.8s ease-in-out infinite; }
+.preloader-word { font-size: .68rem; font-weight: 600; letter-spacing: .32em; padding-left: .32em; text-transform: uppercase; color: var(--on-dark); opacity: 0; animation: pl-word .8s var(--ease) .5s forwards; }
+.pl-leave .preloader { transform: translateY(-100%); border-bottom-right-radius: 160px; pointer-events: none; }
+.pl-leave .preloader-inner { opacity: 0; transform: translateY(-24px); }
+.pl-hold .reveal.is-visible { opacity: 0; transform: translateY(24px); }
+@keyframes pl-show { to { opacity: 1; visibility: visible; } }
+@keyframes pl-failsafe { to { opacity: 0; visibility: hidden; } }
+@keyframes pl-fill { to { clip-path: inset(0 0 0 0); } }
+@keyframes pl-fill-loop {
+  0% { clip-path: inset(100% 0 0 0); }
+  55%, 75% { clip-path: inset(0 0 0 0); }
+  100% { clip-path: inset(0 0 100% 0); }
+}
+@keyframes pl-line { to { transform: scaleX(1); } }
+@keyframes pl-line-loop {
+  0% { transform: scaleX(0); transform-origin: left; }
+  50% { transform: scaleX(1); transform-origin: left; }
+  50.1% { transform: scaleX(1); transform-origin: right; }
+  100% { transform: scaleX(0); transform-origin: right; }
+}
+@keyframes pl-word { to { opacity: 1; } }
+
 /* 10. MOTION & RESPONSIVE */
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s var(--ease), transform .8s var(--ease); }
 .reveal.is-visible { opacity: 1; transform: none; }
@@ -417,6 +457,9 @@ ul { margin: 0; padding: 0; list-style: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
+  .preloader-mark img:last-child { clip-path: none; }
+  .preloader-line span { transform: none; }
+  .preloader-word { opacity: 1; }
 }
 
 @media (max-width: 1080px) {
@@ -447,6 +490,8 @@ ul { margin: 0; padding: 0; list-style: none; }
   .stat:nth-child(3) { padding-left: 0; border-left: 0; }
   .service-block { grid-template-columns: 1fr; }
   .cta-band .hero-actions { justify-content: flex-start; }
+  .team-split { gap: 0; }
+  .team-split .section-head { margin-bottom: clamp(40px, 6vw, 64px); }
 }
 
 @media (max-width: 760px) {
@@ -462,6 +507,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   .assist-panel { inset: 0; width: auto; height: auto; border-radius: 0; z-index: 75; }
   .cookie-actions .btn { flex: 1 1 auto; }
   .grid-2, .grid-3, .grid-4, .footer-grid, .form { grid-template-columns: 1fr; }
+  .team-grid .team-card:nth-child(2) { margin-top: 0; }
   .topbar-hide-sm { display: none; }
   .brand img { height: 38px; }
   .num-list li { grid-template-columns: 44px minmax(0, 1fr); }
