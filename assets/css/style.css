@@ -343,6 +343,17 @@ ul { margin: 0; padding: 0; list-style: none; }
 .prose th { background: var(--forest-900); color: var(--white); font-weight: 700; white-space: nowrap; }
 .prose tbody tr:last-child td { border-bottom: 0; }
 
+/* Insight article pages */
+.article-meta { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: .85rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--on-dark); }
+.article-layout { max-width: 864px; display: flex; flex-direction: column; gap: clamp(32px, 5vw, 56px); }
+.article-figure { aspect-ratio: 16 / 9; border-radius: 0 0 64px 0; }
+.article-figure img { object-position: center 30%; }
+.article-layout .prose { max-width: none; }
+.article-layout .prose > h2:first-of-type { margin-top: 40px; }
+.article-note { margin-top: 48px !important; padding: 20px 24px; background: var(--paper); border-left: 4px solid var(--lime-500); font-size: .92rem; }
+.article-back { align-self: flex-start; font-weight: 700; color: var(--ink); text-decoration: none; }
+.article-back:hover { color: var(--lime-700); }
+
 /* Consent placeholder (blocked embeds, e.g. the contact map) */
 .consent-placeholder { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: center; gap: 18px; padding: clamp(20px, 4vw, 40px); color: var(--on-dark); background: var(--forest-800) url('../img/mark.png') right -40px bottom -40px / 200px no-repeat; }
 .consent-placeholder strong { display: block; color: var(--white); font-size: 1.1rem; margin-bottom: 4px; }
