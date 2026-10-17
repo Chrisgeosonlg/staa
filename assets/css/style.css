@@ -278,21 +278,22 @@ ul { margin: 0; padding: 0; list-style: none; }
 .accordion details p { padding: 0 0 24px; color: var(--ink-soft); max-width: 720px; }
 
 /* Contact */
+.contact-grid > * { min-width: 0; }
 .contact-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(32px, 5vw, 64px); align-items: start; }
 .contact-list { display: flex; flex-direction: column; gap: 4px; }
 .contact-item { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 16px; align-items: center; padding: 18px 0; border-bottom: 1px solid var(--forest-700); }
 .contact-item .tile-letter { width: 52px; height: 52px; background: var(--lime-500); color: var(--forest-900); }
 .contact-item .tile-letter svg { width: 22px; height: 22px; }
 .contact-item small { display: block; color: var(--on-dark); font-size: .8rem; text-transform: uppercase; letter-spacing: .12em; font-weight: 700; }
-.contact-item a, .contact-item span { color: var(--white); font-weight: 600; text-decoration: none; font-size: 1.05rem; }
+.contact-item a, .contact-item span { color: var(--white); font-weight: 600; text-decoration: none; font-size: 1.05rem; overflow-wrap: anywhere; }
 .contact-item a:hover { color: var(--lime-500); }
 
 /* 8. FORMS */
 .form { background: var(--white); color: var(--ink); padding: clamp(24px, 4vw, 44px); border-radius: 0 0 40px 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
-.field { display: flex; flex-direction: column; gap: 8px; }
+.field { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
 .field--full { grid-column: 1 / -1; }
 .field label { font-size: .85rem; font-weight: 700; }
-.field input, .field select, .field textarea { font: inherit; font-size: 1rem; color: var(--ink); background: var(--paper); border: 1.5px solid var(--line); border-radius: var(--radius-cut-sm); padding: 13px 14px; min-height: 48px; transition: border-color .2s, background .2s; }
+.field input, .field select, .field textarea { width: 100%; min-width: 0; font: inherit; font-size: 1rem; color: var(--ink); background: var(--paper); border: 1.5px solid var(--line); border-radius: var(--radius-cut-sm); padding: 13px 14px; min-height: 48px; transition: border-color .2s, background .2s; }
 .field textarea { min-height: 140px; resize: vertical; }
 .field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--forest-900); background: var(--white); }
 .field .error { color: #A3261B; font-size: .8rem; font-weight: 600; min-height: 1em; }
